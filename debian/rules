@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+PACKAGE := guideos-update-notify
+
+%:
+	dh $@
+
+override_dh_install:
+	# Erstellen der notwendigen Verzeichnisse
+	mkdir -p debian/$(PACKAGE)/usr/lib/guideos-update-notify
+	mkdir -p debian/$(PACKAGE)/etc/sudoers.d
+	mkdir -p debian/$(PACKAGE)/usr/share/doc/$(PACKAGE)
+	mkdir -p debian/$(PACKAGE)/etc/xdg/autostart
+
+	# Kopieren der Dateien
+	cp LICENSE debian/$(PACKAGE)/usr/share/doc/$(PACKAGE)/LICENSE
+	cp guideos-update-notify.py debian/$(PACKAGE)/usr/lib/guideos-update-notify/
+	cp guideosupdate debian/$(PACKAGE)/etc/sudoers.d/
+	
+	# Erstellen der .desktop-Datei
+	./create_desktop_files.sh
+
+	# Setzen der Berechtigungen
+	chmod +x debian/$(PACKAGE)/usr/lib/guideos-update-notify/guideos-update-notify.py
+
+
+	dh_install

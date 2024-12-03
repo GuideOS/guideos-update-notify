@@ -1,0 +1,6 @@
+# Allow any user to check for new system updates without
+# requiring user authentication.
+
+ALL ALL = NOPASSWD:/usr/bin/guideos-refresh-cache
+
+ALL ALL = NOPASSWD:/usr/bin/apt update
