@@ -15,14 +15,15 @@ def check_updates():
         upgradable_lines = result.stdout.strip().split("\n")
         if len(upgradable_lines) > 1:  # Die erste Zeile ist ein Header
             # Updates gefunden
-            notify_message = f"{len(upgradable_lines) - 1} updates available."
-            subprocess.run(["notify-send", "APT Updates", notify_message])
+            notify_message = f"{len(upgradable_lines) - 1} Aktualisierungen verfügbar."
+            subprocess.run(["notify-send", "GuideOS Updates", notify_message])
         else:
+            print("No updates available.")
             # Keine Updates verfügbar
-            subprocess.run(["notify-send", "APT Updates", "No updates available."])
+            #subprocess.run(["notify-send", "APT Updates", "No updates available."])
     except subprocess.CalledProcessError as e:
         print(f"Error during update check: {e}")
-        subprocess.run(["notify-send", "APT Updates", "Error checking updates."])
+        #subprocess.run(["notify-send", "APT Updates", "Error checking updates."])
 
 if __name__ == "__main__":
     while True:

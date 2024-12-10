@@ -1,3 +1,9 @@
+guideos-update-notify (0.1.1) unstable; urgency=medium
+
+  * DE Translation added.
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Thu, 03 Dec 2024 20:10:00 +0000
+
 guideos-update-notify (0.1) unstable; urgency=medium
 
   * Initial release.
