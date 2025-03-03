@@ -8,6 +8,6 @@ Homepage: https://rueegger.me
 
 Package: guideos-update-notify
 Architecture: all
-Depends: ${misc:Depends}, python3, bash
+Depends: ${misc:Depends}, python3, bash, libnotify-bin
 Description: A tool to check for updates
  This tool starts on login an runs ever three hours

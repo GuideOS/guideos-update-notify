@@ -1,3 +1,9 @@
+guideos-update-notify (0.1.1-1) unstable; urgency=medium
+
+  * Fix: Missing dependency libnotify-bin
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Tue, 04 Mar 2025 00:16:07 +0100
+
 guideos-update-notify (0.1.1) unstable; urgency=medium
 
   * DE Translation added.
