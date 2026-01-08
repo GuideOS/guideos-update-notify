@@ -1,3 +1,15 @@
+guideos-update-notify (0.1.3) unstable; urgency=medium
+
+  * Notification now expires after 6 seconds
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Wed, 08 Jan 2026 12:00:00 +0100
+
+guideos-update-notify (0.1.2) unstable; urgency=medium
+
+  * urgency high
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Tue, 18 Nov 2025 12:35:52 +0100
+
 guideos-update-notify (0.1.1-1) unstable; urgency=medium
 
   * Fix: Missing dependency libnotify-bin
